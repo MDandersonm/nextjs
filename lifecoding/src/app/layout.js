@@ -24,7 +24,7 @@ export default async function RootLayout({ children }) {
   //서버쪽에서 동적으로 생성한 정적내용을 클라이언트로 전달.
   // const resp= await fetch("http://localhost:9999/topics",{next:{revalidate:0}});//캐시를 쓰지않겠다는것
   const resp = await fetch(process.env.API_URL+"topics", {
-    cache: "no-store",
+    cache: 'no-store',
   }); //캐시를 쓰지않겠다는것
   // 가져온정보는 .next폴더에 보관
 
